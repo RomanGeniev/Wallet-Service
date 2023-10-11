@@ -6,26 +6,26 @@ import java.util.Random;
 
 public class Data {
     private static final ArrayList<String> AccountHistory = new ArrayList<>();
-    private static final HashMap<String,Customers> DATAUSERS = new HashMap<>();
+    private static final HashMap<String,Customers> dataUsers = new HashMap<>();
 
     public static Boolean isHasAccount(String login, String password){
         try {
-            return DATAUSERS.get(login).getPassword().equals(password);
+            return dataUsers.get(login).getPassword().equals(password);
         }catch (NullPointerException e){
             System.out.println("Неверный логин или пароль!");
             return false;
         }
     }
     public static String getPassword(String login){
-        return DATAUSERS.get(login).getPassword();
+        return dataUsers.get(login).getPassword();
     }
 
-    public static void setDATAUSERS(String login, Object o) {
-        DATAUSERS.put(login, (Customers) o);
+    public static void setDataUsers(String login, Object o) {
+        dataUsers.put(login, (Customers) o);
     }
 
     public static Customers getBankAccount(String login){
-        return DATAUSERS.get(login);
+        return dataUsers.get(login);
     }
 
     public static void setAccountHistory(String action) {

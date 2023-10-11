@@ -9,7 +9,7 @@ public class Customers {
     public Customers(String login, String password) {
         this.password = password;
         this.login = login;
-        Data.setDATAUSERS(login, this);
+        Data.setDataUsers(login, this);
     }
 
     public void setBankAccount(float bankAccount) {
