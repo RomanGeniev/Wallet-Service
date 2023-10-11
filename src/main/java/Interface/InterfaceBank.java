@@ -15,9 +15,9 @@ public class InterfaceBank {
 
         do {
             System.out.println("Выберите интересующее вас действие:" +
-                    "\n 1: Создать аккаунт " +
-                    "\n 2: Войти в аккаунт " +
-                    "\n 3: Завершить программу");
+                                "\n 1: Создать аккаунт " +
+                                "\n 2: Войти в аккаунт " +
+                                "\n 3: Завершить программу");
             choosingAction = scanner.nextInt();
             if (choosingAction == 1) {
                 scanner.nextLine();
@@ -36,7 +36,11 @@ public class InterfaceBank {
                     System.out.println("Вы вошли в аккаунт");
                     System.out.println("Ваш баланс: " + Data.getBankAccount(login).getBankAccount());
                     do{
-                        System.out.println("Вы в своем аккаунте, что вы хотите сделать далее? \n 1:Снятие денег \n 2:Взять кредит \n 3:Посмотреть историю \n4:Выйти из аккаунта");
+                        System.out.println("Вы в своем аккаунте, что вы хотите сделать далее? " +
+                                            "\n 1:Снятие денег " +
+                                            "\n 2:Взять кредит " +
+                                            "\n 3:Посмотреть историю " +
+                                            "\n4:Выйти из аккаунта");
                         choosingActionInAccount = scanner.nextInt();
                         if(choosingActionInAccount == 1){
                             System.out.println("Введите сумму снятия");
