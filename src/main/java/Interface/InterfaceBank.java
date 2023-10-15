@@ -44,11 +44,11 @@ public class InterfaceBank {
                         choosingActionInAccount = scanner.nextInt();
                         if(choosingActionInAccount == 1){
                             System.out.println("Введите сумму снятия");
-                            Transactions.debitTransaction(Data.getBankAccount(login),scanner.nextFloat());
+                            Transactions.debitTransaction(Data.getBankAccount(login),scanner.nextInt());
                             System.out.println("Ваш баланс: " + Data.getBankAccount(login).getBankAccount());
                         }else if (choosingActionInAccount == 2){
                             System.out.println("Введите сумму кредита: ");
-                            Transactions.creditTransaction(Data.getBankAccount(login), scanner.nextFloat());
+                            Transactions.creditTransaction(Data.getBankAccount(login), scanner.nextInt());
                             System.out.println("Ваш баланс: " + Data.getBankAccount(login).getBankAccount());
                         } else if (choosingActionInAccount == 3){
                             Data.getAccountHistory();

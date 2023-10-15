@@ -2,9 +2,9 @@ package Core;
 
 public class Customers {
 
-    private String password;
-    private String login;
-    private float bankAccount = 0;
+    private final String password;
+    private final String login;
+    private int bankAccount = 0;
 
     public Customers(String login, String password) {
         this.password = password;
@@ -12,7 +12,7 @@ public class Customers {
         Data.setDataUsers(login, this);
     }
 
-    public void setBankAccount(float bankAccount) {
+    public void setBankAccount(int bankAccount) {
             this.bankAccount = bankAccount;
 
     }
@@ -27,7 +27,7 @@ public class Customers {
         return login;
     }
 
-    public float getBankAccount() {
+    public int getBankAccount() {
         return bankAccount;
     }
 

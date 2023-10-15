@@ -39,7 +39,7 @@ public class Data {
         }
     }
 
-    public static void creatingTransactionId(Float sum,String string){
+    public static void creatingTransactionId(int sum,String string){
 
         Random random = new Random();
         String generatedString = random.ints(97, 122 + 1)
@@ -47,7 +47,7 @@ public class Data {
                 .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
                 .toString();
 
-        String action = string + " на сумму: " + sum.toString() + ". Уникальный идентификатор :" + generatedString;
+        String action = string + " на сумму: " + sum + ". Уникальный идентификатор :" + generatedString;
         setAccountHistory(action);
     }
 
